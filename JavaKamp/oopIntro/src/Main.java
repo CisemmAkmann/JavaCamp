@@ -1,44 +1,28 @@
 public class Main {
 
     public static void main(String[] args) {
-        Product product1 = new Product(1,"Lenovo V14",15000,"16 GB Ram"); //referans oluşturma,instance
+        Product product1 = new Product(1,"Lenovo V14",15000,"16 GB Ram",10); //referans oluşturma,instance
 
-        Product product2 = new Product(2,"Lenovo V15",16000,"32 GB Ram");
-
-
-        Product product3 = new Product();
-        product3.id = 3;
-        product3.name ="Hp 5";
-        product3.unitPrice = 10000;
-        product3.detail = "8 GB Ram";
-
-        Product[] products = {product1,product2,product3};
-
-        for (Product product: products
-             ) {
-            System.out.println(product.name);
-        }
-
-        //System.out.println(products.length);
-
-        Category category1 = new Category(1,"Bilgisayar");
-
-        Category category2 = new Category(2,"Ev/Bahçe");
+        Product product2 = new Product(2,"Lenovo V15",16000,"32 GB Ram",7);
 
 
-        Category[] categories = {category1,category2};
+       Product product3 = new Product();
+       product3.setId(3);
+       product3.setName("Lenovo v15");
+       product3.setDetail("16 gb Ram");
+       product3.setDiscount(10);
+       product3.setUnitPrice(16000);
 
-        for (Category category:categories
-             ) {
-            System.out.println(category.name);
-        }
+       System.out.println(product3.getUnitPriceAfterDiscount());
 
-        ProductManager productManager = new ProductManager();
+        Category category1 = new Category(1, "Bilgisayar");
 
-        productManager.addToCart(product1);
-        productManager.addToCart(product2);
-        productManager.addToCart(product3);
+        Category category2 = new Category();
+        category2.setId(2);
+        category2.set("Ev/Bahçe");
 
+        System.out.println(category1.getName());
+        System.out.println(category2.getName());
 
 
 
